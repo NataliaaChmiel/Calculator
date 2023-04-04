@@ -1,0 +1,79 @@
+"use strict";
+self["webpackHotUpdatekalkulator"](0,{
+
+/***/ 24:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "BinaryCalculator": () => (/* binding */ BinaryCalculator)
+/* harmony export */ });
+/* harmony import */ var _Calculator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(25);
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, _toPropertyKey(descriptor.key), descriptor); } }
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+function _toPropertyKey(arg) { var key = _toPrimitive(arg, "string"); return _typeof(key) === "symbol" ? key : String(key); }
+function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); Object.defineProperty(subClass, "prototype", { writable: false }); if (superClass) _setPrototypeOf(subClass, superClass); }
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf ? Object.setPrototypeOf.bind() : function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf.bind() : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+var BinaryCalculator = /*#__PURE__*/function (_Calculator) {
+  _inherits(BinaryCalculator, _Calculator);
+  var _super = _createSuper(BinaryCalculator);
+  function BinaryCalculator(settings) {
+    var _this;
+    _classCallCheck(this, BinaryCalculator);
+    _this = _super.call(this, settings);
+    console.log(_this.getName());
+    return _this;
+  }
+  _createClass(BinaryCalculator, [{
+    key: "changeNumber",
+    value: function changeNumber(root) {
+      var input = root.firstElementChild;
+      input.innerText = +input.innerText === 0 ? 1 : 0;
+      this.checkNumber();
+      this.updateResult();
+    }
+  }, {
+    key: "add",
+    value: function add(numberX, numberY) {
+      var result = [0, 0, 0, 0, 0, 0, 0, 0, 0];
+      for (var i = numberX.length - 1; i >= 0; i--) {
+        var carryBit = numberX[i] + numberY[i] + result[i];
+        if (carryBit === 2) {
+          result[i] = 0;
+          result[i - 1] = 1;
+        } else if (carryBit === 3) {
+          result[i] = 1;
+          result[i - 1] = 1;
+        } else {
+          result[i] = carryBit;
+        }
+      }
+      return result;
+    }
+  }]);
+  return BinaryCalculator;
+}(_Calculator__WEBPACK_IMPORTED_MODULE_0__["default"]);
+
+// export default BinaryCalculator;
+
+/***/ })
+
+},
+/******/ function(__webpack_require__) { // webpackRuntimeModules
+/******/ /* webpack/runtime/getFullHash */
+/******/ (() => {
+/******/ 	__webpack_require__.h = () => ("d6554acf21127f98931d")
+/******/ })();
+/******/ 
+/******/ }
+);
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiMC5iY2YxYzcwMTkwMjY2ZmJhOWQwMS5ob3QtdXBkYXRlLmpzIiwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztBQUFzQztBQUUvQixJQUFNQyxnQkFBZ0I7RUFBQTtFQUFBO0VBQzNCLDBCQUFZQyxRQUFRLEVBQUU7SUFBQTtJQUFBO0lBQ3BCLDBCQUFNQSxRQUFRO0lBQ2RDLE9BQU8sQ0FBQ0MsR0FBRyxDQUFDLE1BQUtDLE9BQU8sRUFBRSxDQUFDO0lBQUM7RUFDOUI7RUFBQztJQUFBO0lBQUEsT0FFRCxzQkFBYUMsSUFBSSxFQUFFO01BQ2pCLElBQU1DLEtBQUssR0FBR0QsSUFBSSxDQUFDRSxpQkFBaUI7TUFDcENELEtBQUssQ0FBQ0UsU0FBUyxHQUFHLENBQUNGLEtBQUssQ0FBQ0UsU0FBUyxLQUFLLENBQUMsR0FBRyxDQUFDLEdBQUcsQ0FBQztNQUVoRCxJQUFJLENBQUNDLFdBQVcsRUFBRTtNQUNsQixJQUFJLENBQUNDLFlBQVksRUFBRTtJQUNyQjtFQUFDO0lBQUE7SUFBQSxPQUVELGFBQUlDLE9BQU8sRUFBRUMsT0FBTyxFQUFFO01BQ3BCLElBQUlDLE1BQU0sR0FBRyxDQUFDLENBQUMsRUFBRSxDQUFDLEVBQUUsQ0FBQyxFQUFFLENBQUMsRUFBRSxDQUFDLEVBQUUsQ0FBQyxFQUFFLENBQUMsRUFBRSxDQUFDLEVBQUUsQ0FBQyxDQUFDO01BQ3hDLEtBQUssSUFBSUMsQ0FBQyxHQUFHSCxPQUFPLENBQUNJLE1BQU0sR0FBRyxDQUFDLEVBQUVELENBQUMsSUFBSSxDQUFDLEVBQUVBLENBQUMsRUFBRSxFQUFFO1FBQzVDLElBQUlFLFFBQVEsR0FBR0wsT0FBTyxDQUFDRyxDQUFDLENBQUMsR0FBR0YsT0FBTyxDQUFDRSxDQUFDLENBQUMsR0FBR0QsTUFBTSxDQUFDQyxDQUFDLENBQUM7UUFDbEQsSUFBSUUsUUFBUSxLQUFLLENBQUMsRUFBRTtVQUNsQkgsTUFBTSxDQUFDQyxDQUFDLENBQUMsR0FBRyxDQUFDO1VBQ2JELE1BQU0sQ0FBQ0MsQ0FBQyxHQUFHLENBQUMsQ0FBQyxHQUFHLENBQUM7UUFDbkIsQ0FBQyxNQUFNLElBQUlFLFFBQVEsS0FBSyxDQUFDLEVBQUU7VUFDekJILE1BQU0sQ0FBQ0MsQ0FBQyxDQUFDLEdBQUcsQ0FBQztVQUNiRCxNQUFNLENBQUNDLENBQUMsR0FBRyxDQUFDLENBQUMsR0FBRyxDQUFDO1FBQ25CLENBQUMsTUFBTTtVQUNMRCxNQUFNLENBQUNDLENBQUMsQ0FBQyxHQUFHRSxRQUFRO1FBQ3RCO01BQ0Y7TUFDQSxPQUFPSCxNQUFNO0lBQ2Y7RUFBQztFQUFBO0FBQUEsRUE3Qm1DZCxtREFBVTs7QUFnQ2hEOzs7Ozs7OztVQ2xDQSIsInNvdXJjZXMiOlsid2VicGFjazovL2thbGt1bGF0b3IvLi9qcy9CaW5hcnlDYWxjdWxhdG9yLmpzIiwid2VicGFjazovL2thbGt1bGF0b3Ivd2VicGFjay9ydW50aW1lL2dldEZ1bGxIYXNoIl0sInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBDYWxjdWxhdG9yIGZyb20gXCIuL0NhbGN1bGF0b3JcIjtcclxuXHJcbmV4cG9ydCBjbGFzcyBCaW5hcnlDYWxjdWxhdG9yIGV4dGVuZHMgQ2FsY3VsYXRvciB7XHJcbiAgY29uc3RydWN0b3Ioc2V0dGluZ3MpIHtcclxuICAgIHN1cGVyKHNldHRpbmdzKTtcclxuICAgIGNvbnNvbGUubG9nKHRoaXMuZ2V0TmFtZSgpKTtcclxuICB9XHJcblxyXG4gIGNoYW5nZU51bWJlcihyb290KSB7XHJcbiAgICBjb25zdCBpbnB1dCA9IHJvb3QuZmlyc3RFbGVtZW50Q2hpbGQ7XHJcbiAgICBpbnB1dC5pbm5lclRleHQgPSAraW5wdXQuaW5uZXJUZXh0ID09PSAwID8gMSA6IDA7XHJcblxyXG4gICAgdGhpcy5jaGVja051bWJlcigpO1xyXG4gICAgdGhpcy51cGRhdGVSZXN1bHQoKTtcclxuICB9XHJcblxyXG4gIGFkZChudW1iZXJYLCBudW1iZXJZKSB7XHJcbiAgICBsZXQgcmVzdWx0ID0gWzAsIDAsIDAsIDAsIDAsIDAsIDAsIDAsIDBdO1xyXG4gICAgZm9yIChsZXQgaSA9IG51bWJlclgubGVuZ3RoIC0gMTsgaSA+PSAwOyBpLS0pIHtcclxuICAgICAgbGV0IGNhcnJ5Qml0ID0gbnVtYmVyWFtpXSArIG51bWJlcllbaV0gKyByZXN1bHRbaV07XHJcbiAgICAgIGlmIChjYXJyeUJpdCA9PT0gMikge1xyXG4gICAgICAgIHJlc3VsdFtpXSA9IDA7XHJcbiAgICAgICAgcmVzdWx0W2kgLSAxXSA9IDE7XHJcbiAgICAgIH0gZWxzZSBpZiAoY2FycnlCaXQgPT09IDMpIHtcclxuICAgICAgICByZXN1bHRbaV0gPSAxO1xyXG4gICAgICAgIHJlc3VsdFtpIC0gMV0gPSAxO1xyXG4gICAgICB9IGVsc2Uge1xyXG4gICAgICAgIHJlc3VsdFtpXSA9IGNhcnJ5Qml0O1xyXG4gICAgICB9XHJcbiAgICB9XHJcbiAgICByZXR1cm4gcmVzdWx0O1xyXG4gIH1cclxufVxyXG5cclxuLy8gZXhwb3J0IGRlZmF1bHQgQmluYXJ5Q2FsY3VsYXRvcjtcclxuIiwiX193ZWJwYWNrX3JlcXVpcmVfXy5oID0gKCkgPT4gKFwiZDY1NTRhY2YyMTEyN2Y5ODkzMWRcIikiXSwibmFtZXMiOlsiQ2FsY3VsYXRvciIsIkJpbmFyeUNhbGN1bGF0b3IiLCJzZXR0aW5ncyIsImNvbnNvbGUiLCJsb2ciLCJnZXROYW1lIiwicm9vdCIsImlucHV0IiwiZmlyc3RFbGVtZW50Q2hpbGQiLCJpbm5lclRleHQiLCJjaGVja051bWJlciIsInVwZGF0ZVJlc3VsdCIsIm51bWJlclgiLCJudW1iZXJZIiwicmVzdWx0IiwiaSIsImxlbmd0aCIsImNhcnJ5Qml0Il0sInNvdXJjZVJvb3QiOiIifQ==
